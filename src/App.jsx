@@ -2,6 +2,7 @@ import { Routes, Route, Link, NavLink } from 'react-router-dom'
 import logo from './assets/logo.png'
 import Home from './pages/Home.jsx'
 import Stub from './pages/Stub.jsx'
+import Dealers from './pages/Dealers.jsx'
 
 const links = [['/', 'Home'], ['/catalogue', 'Catalogue'], ['/dealers', 'Dealers'], ['/login', 'Login']]
 
@@ -19,7 +20,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/catalogue" element={<Stub title="Catalogue" note="Product grid, filters and search come next." />} />
         <Route path="/product/:id" element={<Stub title="Product" note="Product page with price and Add to Cart comes next." />} />
-        <Route path="/dealers" element={<Stub title="Dealers" note="Dealer locator comes next." />} />
+        <Route path="/dealers" element={<Dealers />} />
         <Route path="/login" element={<Stub title="Login" note="Login and sign-up come after the Spring Boot backend." />} />
         <Route path="/cart" element={<Stub title="Cart" note="Cart and checkout come next." />} />
       </Routes>
