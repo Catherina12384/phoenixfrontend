@@ -1,6 +1,6 @@
 import { DEALERS } from '../data/dealers.js'
 import { useDealerFilter } from '../hooks/useDealerFilter.js'
-import '../dealers.css'
+import '../css/dealers.css'
 
 // Drop this at the top of the Catalogue page: <DealerChips />
 // Products should then be filtered with: selected.length === 0 || selected.includes(product.dealerId)

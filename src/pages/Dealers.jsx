@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getDealers } from '../data/dealers.js'
 import { useDealerFilter } from '../hooks/useDealerFilter.js'
-import '../dealers.css'
+import '../css/dealers.css'
 
 export default function Dealers() {
   const [dealers, setDealers] = useState(null)
