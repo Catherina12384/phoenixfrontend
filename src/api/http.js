@@ -1,7 +1,7 @@
 // The only place that talks to fetch. Same-origin, cookie-based session (httpOnly, set by Spring Boot).
 const BASE = (import.meta.env.VITE_API_BASE_URL ?? '/api').replace(/\/$/, '')
 // Local demo builds without a Spring Boot API should stay usable by default.
-export const isMockAuthEnabled = import.meta.env.VITE_USE_MOCK_AUTH === 'true' || import.meta.env.DEV
+export const isMockAuthEnabled = import.meta.env.VITE_USE_MOCK_AUTH === 'true'
 
 export class ApiError extends Error {
   constructor(status, detail, { errors = {}, retryAfterSeconds = null } = {}) {
@@ -59,4 +59,6 @@ export async function request(method, path, body) {
 export const http = {
   get: path => request('GET', path),
   post: (path, body = {}) => request('POST', path, body),
+  put: (path, body) => request('PUT', path, body),
+  delete: path => request('DELETE', path),
 }
